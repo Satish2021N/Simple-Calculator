@@ -1,6 +1,6 @@
 from tkinter import *
 root = Tk()
-root.geometry("425x585+300+300")
+root.geometry("425x585")
 root.resizable(0,0) #To disable resize button
 root.title("Simple Calculator")
 root.iconbitmap(r'calc.ico')
@@ -55,12 +55,12 @@ def button_equal():
     e.delete(0,END)
     if math == "addition":
         e.insert(0, f_num + int(second_number))
-    if math == "subtraction":
+    elif math == "subtraction":
         e.insert(0, f_num - int(second_number))
-    if math == "multiplication":
+    elif math == "multiplication":
         e.insert(0, f_num * int(second_number))
-    if math == "division":
-        e.insert(0, f_num // int(second_number))
+    elif math == "division":
+        e.insert(0, f_num /int(second_number))
 
 # Frames
 row1 = Frame(root, bg="#A0ABA4")
